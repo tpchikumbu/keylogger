@@ -1,0 +1,1 @@
+Start of basic keylogger. Program on startup and start tracking input.
