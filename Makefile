@@ -1,5 +1,5 @@
 linux_logger: linux_logger.cpp
-	g++ linux_logger.cpp -o linux
+	g++ -o linux linux_logger.cpp -lncurses 
 
 windows_logger: windows_logger.cpp
 	g++ windows_logger.cpp -o windows
